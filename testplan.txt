@@ -1,0 +1,21 @@
+Run 50 times
+Workload D will malloc() an amount of bytes that goes above the limit (ex. malloc(5000)) and then
+use malloc to allocate 5000 bytes 120 times.
+
+This will rigorously check if malloc() handles cases in which the user will try to allocate more memory than we can handle.
+
+
+Run 50 times
+Workload E will malloc() 120 byte chunks and then free() all 120 of those valid pointers and it will also 
+free() invalid pointers each 120 times. 
+
+This will rigorously check if free() can distinguish between pointers that were malloc()ed and not malloc()ed.
+
+
+
+
+
+  
+	
+		
+	
